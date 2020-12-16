@@ -25,7 +25,6 @@ function checkLetter (button) {
         let selectedLetters = document.querySelectorAll('.letters');
         let match = null;
         for (i = 0; i < selectedLetters.length; i++) {
-          if () {}
-        }
+        };
         return match;
 };
