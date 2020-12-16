@@ -27,3 +27,18 @@ function getRandomQuestions (arrQ) {
         let randomQueston = arrQ[randomIndex];
         return randomQuestion;
 }
+
+// Display question
+
+function displayQuestion(arr) {
+      let appendQuestion = document.createElement('h2');
+      appendQuestion.textContent = arr;
+      document.querySelector('#banner').appendChild(appendQuestion);
+      appendQuestion.className = 'questions';
+}
+
+// check if letter is in phrase
+
+function checkLetter () {
+        let liAttempts =
+}
