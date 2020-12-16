@@ -6,6 +6,12 @@ const phrases = ["singing loud for all to hear", "christmas spirit",
 var missed = 0;
 
 // listen for the start button to be pressed
-startButton.addEventListener('click', => {
+startButton.addEventListener('click', () => {
   overlay.style.display = 'none';
 });
+
+// return a random phrase as an array
+const = getRandomPhraseAsArray = arr => {
+
+
+}
