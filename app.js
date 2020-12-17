@@ -6,6 +6,7 @@ const phrases = ["singing loud for all to hear", "christmas spirit",
                 "buddy the elf", "the naughty list", "the nice list"];
 const button = document.getElementsByTagName('button');
 const hearts = document.querySelectorAll(".tries img");
+const overlay = document.getElementById('#overlay');
 let missed = 0;
 let randomIndex = Math.floor(Math.random() * phrases.length);
 
