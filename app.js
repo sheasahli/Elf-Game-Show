@@ -21,6 +21,7 @@ function getRandomPhraseAsArray (arr) {
 
 getRandomPhraseAsArray(phrases);
 
+// adds the letters of a string to the display
 function addPhraseToDisplay(arr) {
   for (let i = 0; i < arr.length; i++) {
     let li = document.createElement('LI');
@@ -46,3 +47,16 @@ function checkLetter(btn) {
         };
         return match;
 };
+
+//check if the game has been won or lost
+const checkWin = () => {
+
+
+};
+
+
+//listen for the onscreen keyboard to be clicked
+qwerty.addEventListener('click', e => {
+
+
+});
