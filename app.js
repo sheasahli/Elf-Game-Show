@@ -25,7 +25,7 @@ function addPhraseToDisplay(arr) {
   for (let i = 0; i < arr.length; i++) {
     let li = document.createElement('LI');
     li.textContent = arr[i];
-    phrase.appendChild(li);
+    phrases.appendChild(li);
     if (arr[i]) {
       li.className = 'letter';
     } else {
