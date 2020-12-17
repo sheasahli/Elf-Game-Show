@@ -4,6 +4,7 @@ const ul = document.getElementById('#list');
 const startButton = document.querySelector('.btn__reset');
 const phrases = ["singing loud for all to hear", "christmas spirit",
                 "buddy the elf", "the naughty list", "the nice list"];
+const button = document.getElementsByTagName('button');
 let missed = 0;
 let randomIndex = Math.floor(Math.random() * phrases.length);
 
@@ -38,11 +39,11 @@ function addPhraseToDisplay(arr) {
 let addToDisplay = addPhraseToDisplay(randomPhraseArray);
 
 // check if letter is in phrase
-function checkLetter(button) {
+function checkLetter(btn) {
         let li = document.querySelectorAll('.letter');
         let match = null;
         for (let i = 0; i < li.length; i++) {
-            if (li[i].textContent.toLowerCase() === button.textContent) {
+            if (li[i].textContent.toLowerCase() === btn.textContent) {
               li.classList.add('show');
               match = li[i].textContent;
             }
