@@ -11,7 +11,7 @@ let missed = 0;
 let randomIndex = Math.floor(Math.random() * phrases.length);
 
 // listen for the start button to be pressed
-startButton.addEventListener('click', (e) => {
+startButton.addEventListener('click', () => {
   overlay.style.display = 'none';
 });
 
@@ -72,7 +72,7 @@ qwerty.addEventListener('click', (e) => {
 //check if the game has been won or lost
 function checkWin() {
     let letters = document.querySelectorAll('.letter');
-    let show = document.getElementsByClassName('.show');
+    let show = document.getElementsByClassName('show');
     if (letters.length === show.length) {
       overlay.className = 'win';
       overlay.style.display = 'flex';
