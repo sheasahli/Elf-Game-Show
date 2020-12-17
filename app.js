@@ -19,12 +19,12 @@ function getRandomPhraseAsArray (arr) {
       return newRandomPhrase;
 };
 
-getRandomPhraseAsArray(phrases);
+let randomPhraseArray = getRandomPhraseAsArray(phrases);
 
 // adds the letters of a string to the display
 function addPhraseToDisplay(arr) {
   for (let i = 0; i < arr.length; i++) {
-    let li = document.createElement('li');
+    const li = document.createElement('li');
     li.textContent = arr[i];
     ul.appendChild(li);
     if (arr[i] !== ' ') {
@@ -34,6 +34,8 @@ function addPhraseToDisplay(arr) {
     }
   }
 };
+
+let addToDisplay = addPhraseToDisplay(randomPhraseArray);
 
 // check if letter is in phrase
 function checkLetter(button) {
