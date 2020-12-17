@@ -6,6 +6,7 @@ const phrases = ["singing loud for all to hear", "christmas spirit",
                 "buddy the elf", "the naughty list", "the nice list"];
 const button = document.getElementsByTagName('button');
 const hearts = document.querySelectorAll(".tries img");
+const overlay = document.getElementById('#overlay');
 let missed = 0;
 let randomIndex = Math.floor(Math.random() * phrases.length);
 
@@ -69,14 +70,14 @@ const checkWin = () => {
 
 
 //listen for the onscreen keyboard to be clicked
-qwerty.addEventListener('click', e => {
+qwerty.addEventListener('click', (e) => {
     if(e.target.tagName === 'BUTTON') {
         e.target.className = 'chosen';
         e.target.disabled = true;
     } else if (e.target) {
         alert('Please click button.')
     }
-    const buttonCheck = checkLetter(e.target);
+    let buttonCheck = checkLetter(e.target);
     if (buttonCheck === null) {
         missed += 1;
         hearts[missed - 1].src = 'images/lostHeart.png';
