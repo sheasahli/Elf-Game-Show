@@ -55,7 +55,7 @@ function checkLetter(button) {
 //check if the game has been won or lost
 const checkWin = () => {
     let letters = document.querySelectorAll('.letter');
-    let show = document.getElementByClassName('.show');
+    let show = document.getElementsByClassName('.show');
     if (letters.length === show.length) {
       overlay.className = 'win';
       overlay.style.display = 'flex';
