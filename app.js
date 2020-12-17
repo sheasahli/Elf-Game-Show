@@ -13,16 +13,29 @@ startButton.addEventListener('click', () => {
 });
 
 // return a random phrase as an array
-function getRandomPhraseAsArray (arrP) {
-      let randomPhrase = arrP[randomIndex];
-      let phrasesParse = Object.values(randomPhrase);
-      return phraseParse;
-}
+function getRandomPhraseAsArray (arr) {
+      let randomPhrase = arr[randomIndex];
+      var phraseAsArray = randomPhrase.split('');
+      return phraseAsArray;
+};
+
+getRandomPhraseAsArray(phrases);
+
+function addPhraseToDisplay(arr) {
+  for (let i = 0; i < arr.length; i++)
+    let li = document.createElement('li');
+    li.textContent = arr[i];
+    ul.appendChild(li);
+    if (arr[i]) {
+      li.className = 'letter';
+    } else {
+      li.className = 'space';
+    }
+};
 
 // check if letter is in phrase
-
-function checkLetter (button) {
-        let selectedLetters = document.querySelectorAll('.letters');
+function checkLetter(btn) {
+        let selectedLetters = document.querySelectorAll('li');
         let match = null;
         for (i = 0; i < selectedLetters.length; i++) {
         };
