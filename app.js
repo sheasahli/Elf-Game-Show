@@ -6,12 +6,12 @@ const phrases = ["singing loud for all to hear", "christmas spirit",
                 "buddy the elf", "the naughty list", "the nice list"];
 const button = document.getElementsByTagName('button');
 const hearts = document.querySelectorAll(".tries img");
-const overlay = document.getElementById('#overlay');
+const overlay = document.getElementById('overlay');
 let missed = 0;
 let randomIndex = Math.floor(Math.random() * phrases.length);
 
 // listen for the start button to be pressed
-startButton.addEventListener('click', () => {
+startButton.addEventListener('click', (e) => {
   overlay.style.display = 'none';
 });
 
