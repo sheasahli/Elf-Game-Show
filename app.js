@@ -19,6 +19,8 @@ function getRandomPhraseAsArray (arr) {
       return newRandomPhrase;
 };
 
+getRandomPhraseAsArray(phrases);
+
 // adds the letters of a string to the display
 function addPhraseToDisplay(arr) {
   for (let i = 0; i < arr.length; i++) {
