@@ -41,7 +41,7 @@ let addToDisplay = addPhraseToDisplay(randomPhraseArray);
 function checkLetter(button) {
         let li = document.querySelectorAll('.letter');
         let match = null;
-        for (let i = 0; i < selectedLetters.length; i++) {
+        for (let i = 0; i < li.length; i++) {
             if (li[i].textContent.toLowerCase() === button.textContent) {
               li.classList.add('show');
               match = li[i].textContent;
