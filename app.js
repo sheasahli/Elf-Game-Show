@@ -23,9 +23,9 @@ getRandomPhraseAsArray(phrases);
 
 function addPhraseToDisplay(arr) {
   for (let i = 0; i < arr.length; i++)
-    let li = document.createElement('li');
+    const li = document.createElement('LI');
     li.textContent = arr[i];
-    ul.appendChild(li);
+    phrase.appendChild(li);
     if (arr[i]) {
       li.className = 'letter';
     } else {
