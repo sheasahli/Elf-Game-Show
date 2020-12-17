@@ -15,11 +15,8 @@ startButton.addEventListener('click', () => {
 // return a random phrase as an array
 function getRandomPhraseAsArray (arr) {
       let randomPhrase = arr[randomIndex];
-      var phraseAsArray = randomPhrase.split('');
-      return phraseAsArray;
-};
 
-getRandomPhraseAsArray(phrases);
+};
 
 // adds the letters of a string to the display
 function addPhraseToDisplay(arr) {
