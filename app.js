@@ -23,8 +23,8 @@ getRandomPhraseAsArray(phrases);
 
 function addPhraseToDisplay(arr) {
   for (let i = 0; i < arr.length; i++)
-    let li = document.createElement('LI');
-    li.textContent = arr[i];
+    let letterItem = document.createElement('LI');
+    letterItem.textContent = arr[i];
     phrase.appendChild(li);
     if (arr[i]) {
       li.className = 'letter';
