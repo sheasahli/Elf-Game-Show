@@ -44,7 +44,7 @@ function checkLetter(button) {
         let match = null;
         for (let i = 0; i < li.length; i++) {
             if (li[i].textContent.toLowerCase() === button.textContent) {
-              li.classList.add('show');
+              li[i].classList.add('show');
               match = li[i].textContent;
             }
         }
