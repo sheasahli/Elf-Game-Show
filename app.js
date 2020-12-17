@@ -22,10 +22,10 @@ function getRandomPhraseAsArray (arr) {
 // adds the letters of a string to the display
 function addPhraseToDisplay(arr) {
   for (let i = 0; i < arr.length; i++) {
-    let li = document.createElement('LI');
+    let li = document.createElement('li');
     li.textContent = arr[i];
-    phrases.appendChild(li);
-    if (arr[i]) {
+    ul.appendChild(li);
+    if (arr[i] !== ' ') {
       li.className = 'letter';
     } else {
       li.className = 'space';
@@ -34,11 +34,11 @@ function addPhraseToDisplay(arr) {
 };
 
 // check if letter is in phrase
-function checkLetter(btn) {
+function checkLetter(button) {
         let selectedLetters = document.querySelectorAll('.letter');
         let match = null;
         for (let i = 0; i < selectedLetters.length; i++) {
-            if (selectedLetters[i].textContent.toLowerCase() === btn.textContent) {
+            if (selectedLetters[i].textContent.toLowerCase() === button.textContent) {
               selectedLetters.classList.add('show');
               match = selectedLetters[i].textContent;
             }
