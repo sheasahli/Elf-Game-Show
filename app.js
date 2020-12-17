@@ -39,12 +39,12 @@ let addToDisplay = addPhraseToDisplay(randomPhraseArray);
 
 // check if letter is in phrase
 function checkLetter(button) {
-        let selectedLetters = document.querySelectorAll('.letter');
+        let li = document.querySelectorAll('.letter');
         let match = null;
         for (let i = 0; i < selectedLetters.length; i++) {
-            if (selectedLetters[i].textContent.toLowerCase() === button.textContent) {
-              selectedLetters.classList.add('show');
-              match = selectedLetters[i].textContent;
+            if (li[i].textContent.toLowerCase() === button.textContent) {
+              li.classList.add('show');
+              match = li[i].textContent;
             }
         };
         return match;
