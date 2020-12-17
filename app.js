@@ -36,9 +36,13 @@ function addPhraseToDisplay(arr) {
 
 // check if letter is in phrase
 function checkLetter(btn) {
-        let selectedLetters = document.querySelectorAll('li');
+        let selectedLetters = document.querySelectorAll('.letter');
         let match = null;
-        for (i = 0; i < selectedLetters.length; i++) {
+        for (let i = 0; i < selectedLetters.length; i++) {
+            if (selectedLetters[i].textContent.toLowerCase() === btn.textContent) {
+              selectedLetters.classList.add('show');
+              match = selectedLetters[i].textContent;
+            }
         };
         return match;
 };
