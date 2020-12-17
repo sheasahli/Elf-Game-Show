@@ -1,9 +1,9 @@
 const qwerty = document.querySelector('#qwerty');
 const phrase = document.querySelector('#phrase');
+const ul = document.getElementById('#list');
 const startButton = document.querySelector('.btn__reset');
 const phrases = ["singing loud for all to hear", "christmas spirit",
                 "buddy the elf", "the naughty list", "the nice list"];
-
 let missed = 0;
 let randomIndex = Math.floor(Math.random() * phrases.length);
 
@@ -14,8 +14,9 @@ startButton.addEventListener('click', () => {
 
 // return a random phrase as an array
 function getRandomPhraseAsArray (arr) {
-      let randomPhrase = arr[randomIndex];
-
+      let randomPhrase = phrases[randomIndex];
+      let newRandomPhrase = randomPhrase.split('');
+      return newRandomPhrase;
 };
 
 // adds the letters of a string to the display
