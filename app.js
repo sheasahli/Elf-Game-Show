@@ -53,22 +53,6 @@ function checkLetter(button) {
         return match;
 };
 
-//check if the game has been won or lost
-const checkWin = () => {
-    let letters = document.querySelectorAll('.letter');
-    let show = document.getElementsByClassName('.show');
-    if (letters.length === show.length) {
-      overlay.className = 'win';
-      overlay.style.display = 'flex';
-      document.querySelector('h2').textContent = 'Congratulations! You won!';
-    } else if (missed > 4) {
-      overlay.className = 'lose';
-      overlay.style.display = 'flex';
-      document.querySelector('h2').textContent = "You lost, try again!";
-    }
-};
-
-
 //listen for the onscreen keyboard to be clicked
 qwerty.addEventListener('click', (e) => {
     if(e.target.tagName === 'BUTTON') {
@@ -84,3 +68,18 @@ qwerty.addEventListener('click', (e) => {
     }
     checkWin();
 });
+
+//check if the game has been won or lost
+function checkWin() {
+    let letters = document.querySelectorAll('.letter');
+    let show = document.getElementsByClassName('.show');
+    if (letters.length === show.length) {
+      overlay.className = 'win';
+      overlay.style.display = 'flex';
+      document.querySelector('h2').textContent = 'Congratulations! You won!';
+    } else if (missed > 4) {
+      overlay.className = 'lose';
+      overlay.style.display = 'flex';
+      document.querySelector('h2').textContent = "You lost, try again!";
+    }
+};
